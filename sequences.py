@@ -1,3 +1,5 @@
+import timeit
+
 s = "abc"
 l = list(range(5))
 
@@ -47,3 +49,7 @@ print(l)
 
 l = [ [ "".join((chr(i),str(j))) for i in range(65,73) ] for j in range(1,9) ]
 print(l)
+
+print(timeit.timeit('[i for i in range(int(1e6))]', number=10))
+
+
